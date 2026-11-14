@@ -1,0 +1,10 @@
+NAME                          IMAGE                             COMMAND                  SERVICE      CREATED       STATUS                    PORTS
+invoicely-lite-alloy-1        grafana/alloy:v1.21.3             "/bin/alloy run --se…"   alloy        3 hours ago   Up 34 minutes             
+invoicely-lite-api-1          invoicely-lite-api                "/usr/local/bin/api"     api          3 hours ago   Up 34 minutes (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+invoicely-lite-asp-mock-1     invoicely-lite-asp-mock           "/usr/local/bin/asp-…"   asp-mock     3 hours ago   Up 34 minutes (healthy)   0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp
+invoicely-lite-cadvisor-1     ghcr.io/google/cadvisor:v0.60.6   "/usr/bin/entrypoint…"   cadvisor     3 hours ago   Up 34 minutes (healthy)   8080/tcp
+invoicely-lite-grafana-1      grafana/grafana:13.2.6            "/run.sh"                grafana      3 hours ago   Up 34 minutes             0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+invoicely-lite-loki-1         grafana/loki:3.7.9                "/usr/bin/loki -conf…"   loki         3 hours ago   Up 34 minutes             3100/tcp
+invoicely-lite-postgres-1     postgres:16.15-alpine3.23         "docker-entrypoint.s…"   postgres     3 hours ago   Up 34 minutes (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+invoicely-lite-prometheus-1   prom/prometheus:v3.16.0           "/bin/prometheus --c…"   prometheus   3 hours ago   Up 34 minutes             0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+invoicely-lite-web-1          invoicely-lite-web                "docker-entrypoint.s…"   web          3 hours ago   Up 34 minutes (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
